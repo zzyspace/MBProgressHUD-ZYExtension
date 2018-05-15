@@ -136,9 +136,6 @@
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     
-    // 不可交互
-    hud.userInteractionEnabled = NO;
-    
     return hud;
 }
 
