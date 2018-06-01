@@ -98,6 +98,13 @@
     return [self showMessage:message toView:view];
 }
 
+#pragma mark - Progress
+
++ (MBProgressHUD *)showProgress:(NSString *)message {
+    [self hideHUDForView:nil];
+    return [self showProgress:message toView:nil];
+}
+
 #pragma mark - Common
 
 + (void)show:(NSString *)text icon:(UIImage *)icon view:(UIView *)view duration:(NSTimeInterval)duration
@@ -139,9 +146,9 @@
     return hud;
 }
 
-+ (MBProgressHUD *)showProgress:(NSString *)message
++ (MBProgressHUD *)showProgress:(NSString *)message toView:(UIView *)view
 {
-    UIView *view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     

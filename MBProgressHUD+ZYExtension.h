@@ -50,6 +50,7 @@
  *  调用`-setProgress:`设置进度
  */
 + (MBProgressHUD *)showProgress:(NSString *)message;
++ (MBProgressHUD *)showProgress:(NSString *)message toView:(UIView *)view;
 
 /**
  *  隐藏指示器
