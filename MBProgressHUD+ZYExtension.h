@@ -20,23 +20,23 @@
 /**
  *  显示文字, 默认1.5秒后自动消失
  */
-+ (void)showText:(NSString *)message;
-+ (void)showText:(NSString *)message toView:(UIView *)view;
-+ (void)showText:(NSString *)message toView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion;
++ (MBProgressHUD *)showText:(NSString *)message;
++ (MBProgressHUD *)showText:(NSString *)message toView:(UIView *)view;
++ (MBProgressHUD *)showText:(NSString *)message toView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion;
 
 /**
  *  显示成功指示器, 默认1.5秒后自动消失
  */
-+ (void)showSuccess:(NSString *)message;
-+ (void)showSuccess:(NSString *)message toView:(UIView *)view;
-+ (void)showSuccess:(NSString *)message toView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion;
++ (MBProgressHUD *)showSuccess:(NSString *)message;
++ (MBProgressHUD *)showSuccess:(NSString *)message toView:(UIView *)view;
++ (MBProgressHUD *)showSuccess:(NSString *)message toView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion;
 
 /**
  *  显示失败指示器, 默认1.5秒后自动消失
  */
-+ (void)showError:(NSString *)message;
-+ (void)showError:(NSString *)message toView:(UIView *)view;
-+ (void)showError:(NSString *)message toView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion;
++ (MBProgressHUD *)showError:(NSString *)message;
++ (MBProgressHUD *)showError:(NSString *)message toView:(UIView *)view;
++ (MBProgressHUD *)showError:(NSString *)message toView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion;
 
 /**
  *  显示等待指示器, 消失需要调用 `+hideHUD`
