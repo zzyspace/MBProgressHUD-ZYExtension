@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'MBProgressHUD-ZYExtension'
-  s.version  = '1.0.3'
+  s.version  = '1.0.4'
   s.license  = 'MIT'
   s.summary  = 'Easy way to use MBProgressHUD'
   s.homepage = 'https://github.com/zzyspace/MBProgressHUD-ZYExtension.git'
