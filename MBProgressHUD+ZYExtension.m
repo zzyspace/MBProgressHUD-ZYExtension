@@ -112,7 +112,7 @@
 
 + (MBProgressHUD *)show:(NSString *)text icon:(UIImage *)icon view:(UIView *)view duration:(NSTimeInterval)duration
 {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
@@ -137,7 +137,7 @@
 
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view
 {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
@@ -153,7 +153,7 @@
 
 + (MBProgressHUD *)showProgress:(NSString *)message toView:(UIView *)view
 {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
@@ -187,7 +187,7 @@
 
 + (void)zy_hideHUDForView:(UIView *)view animated:(BOOL)animated
 {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     [self hideHUDForView:view animated:animated];
 }
 
